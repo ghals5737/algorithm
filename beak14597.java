@@ -6,13 +6,13 @@ import java.util.StringTokenizer;
 public class beak14597 {
 	static int n,m;
 	static int[][] arr1,arr2;
-	static long dfs(int h,int a,int b,long sum) {
-		long num=(arr1[h][a]-arr2[h][b])*(arr1[h][a]-arr2[h][b]);
-		if(h==n-1) {
-			return sum;
-		}
+	// static long dfs(int h,int a,int b,long sum) {
+	// 	long num=(arr1[h][a]-arr2[h][b])*(arr1[h][a]-arr2[h][b]);
+	// 	if(h==n-1) {
+	// 		return sum;
+	// 	}
 	    
-	}
+	// }
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));

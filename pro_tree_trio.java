@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+public class pro_tree_trio {
     static ArrayList<Integer>[]node;
     static int[] dist;
     static boolean[] check;

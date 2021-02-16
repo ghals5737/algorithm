@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+public class programers_kakao_2021_03 {
     static int[][][][][] arr=new int[3][2][2][2][100001];
     static HashMap<String,Integer>map=new HashMap<>();
     static int[] idx=new int[5];
