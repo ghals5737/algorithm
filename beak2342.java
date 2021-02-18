@@ -10,7 +10,7 @@ public class beak2342 {
     static int[] arr;
     static int dp(int idx,int l,int r){
         if(idx==n)return 0;
-        
+        return 0;
     }
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
