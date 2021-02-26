@@ -12,12 +12,14 @@ public class beak1400 {
         int y;
         int a;
         int b;
+        int time;
         boolean flag;
-        public Pair(int x,int y,int a,int b,boolean flag){
+        public Pair(int x,int y,int a,int b,int time,boolean flag){
             this.x=x;
             this.y=y;
             this.a=a;
             this.b=b;
+            this.time=time;
             this.flag=flag;
         }
     }    
@@ -42,17 +44,26 @@ public class beak1400 {
         v[sY][sX][0]=true;
         Queue<Node>q=new LinkedList<>();
         q.add(new Node(sX,sY));
+        int cnt=0;
         while(!q.isEmpty()){
-            Node el=q.poll();
-            int x=el.x;
-            int y=el.y;
-            for(int i=0;i<4;i++){
-                int nx=x+dx[i];
-                int ny=y+dy[i];
-                if(check(nx, ny)&&map[ny][nx]!=0){
-                    
+            int qSize=q.size();
+            for(int i=0;i<qSize;i++){
+                Node el=q.poll();
+                int x=el.x;
+                int y=el.y;
+                for(int k=0;k<4;k++){
+                    int nx=x+dx[k];
+                    int ny=y+dy[k];
+                    if(check(nx, ny)&&map[ny][nx]!=0){
+                        if(map[ny][nx]==1){
+                            
+                        }else{
+                            
+                        }                  
+                    }
                 }
             }
+            
         }
     }
 
@@ -66,7 +77,7 @@ public class beak1400 {
             map=new int[n][m];
             v=new boolean[n][m][402];
             arr=new Pair[10];
-            for(int i=0;i<10;i++)arr[i]=new Pair(0,0,0,0,false);
+            for(int i=0;i<10;i++)arr[i]=new Pair(0,0,0,0,0,false);
             int cnt=0;
             for(int i=0;i<n;i++){
                 st=new StringTokenizer(bf.readLine()); 
@@ -83,7 +94,8 @@ public class beak1400 {
                         map[i][j]=1;
                     }else if(c>='0'&&c<='9'){
                         arr[c-'0'].x=j;
-                        arr[c-'0'].y=i;  
+                        arr[c-'0'].y=i;
+                        map[i][j]=2;  
                         cnt++;                      
                     }
                 }                
