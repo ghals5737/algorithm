@@ -24,22 +24,15 @@ public class beak2230 {
         int e=0;
         long ans=Long.MAX_VALUE;
         long diff=0;
-        while((s<=e&&e<n)){
-            if(diff>=m){                
-                ans=Math.min(ans,diff);
-                if(s==e){
-                    e++;
-                    if(e==n)break;                    
-                    diff=arr[e]-arr[s];
-                }else{
-                    s++;
-                    diff=arr[e]-arr[s];
-                }
-            }else{
-                e++;              
-                if(e==n)break;  
-                diff=arr[e]-arr[s];                
-            }           
+        while(s<n&&e<n){
+            diff=arr[e]-arr[s];
+            if(diff>=m){
+                s++;      
+                ans=Math.min(diff,ans);          
+            }                               
+            if(diff<m){
+                e++;
+            }            
         }   
         System.out.println(ans);
     }    
