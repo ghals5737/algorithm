@@ -24,6 +24,7 @@ public class beak7785 {
                 pq.add(key);
             }
         }
+        
         while(!pq.isEmpty()){
             sb.append(pq.poll()+"\n");
         }
