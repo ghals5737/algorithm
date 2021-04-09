@@ -12,7 +12,7 @@ public class leetcode_MaximumDepthofBinaryTree {
              }
          }
     class Solution {
-        static int solve(TreeNode root,int d){
+        int solve(TreeNode root,int d){
             if(root==null)return d;
             return Math.max(solve(root.left,d+1),solve(root.right,d+1));
         }
