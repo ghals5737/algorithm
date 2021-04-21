@@ -42,6 +42,7 @@ public class beak2615 {
                 map[i][j]=Integer.parseInt(st.nextToken());
             }
         }
+       
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 if(map[i][j]==0)continue;
